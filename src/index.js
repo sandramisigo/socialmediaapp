@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { sendToVercelAnalytics } from './vitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,4 +10,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals(sendToVercelAnalytics);
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .catch((error) => console.error('Service Worker registration failed:', error));
+  });
+}

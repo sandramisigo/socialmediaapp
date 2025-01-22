@@ -1,0 +1,94 @@
+/* Container for the post card */
+.postCard {
+    background-color: #696161;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 300px; /* Adjust the width as needed */
+    overflow: hidden;
+  }
+  
+  /* Title (user name) */
+  .postCard h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Content text */
+  .postCard p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Container for media (photos and videos) */
+  .postMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling for photos */
+  .postMedia img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  /* Styling for the video */
+  .postMedia video {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #000;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .postCard {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .postMedia img,
+    .postMedia video {
+      max-width: 100%;
+    }
+  }
+  .postCard {
+    border: 2px solid #000000;
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+  
+  .postMedia {
+    margin: 16px 0;
+  }
+  
+  .likeButtonContainer {
+    margin-top: 16px;
+  }
+  
+  .likeButton {
+    background-color: #0d437c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+  .likeButton:hover {
+    background-color: #b3002d;
+  }
+  
+  .likeButton:focus {
+    outline: none;
+  }
+  
